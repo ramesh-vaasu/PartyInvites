@@ -1,0 +1,1763 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/15/2014 1:00:07 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="AMT-05-PC"
+  DTS:CreatorName="AMT-05-PC\AMT-05"
+  DTS:DTSID="{0C33FBF7-5CDE-47B0-A9C2-ED085A47BE36}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{0F519A08-F4F6-445F-A54C-F58C0C77B5DB}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AMT-03.reouLive11-sep-2012.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{ED2E0898-7170-4DBE-8FD4-62625C6803A0}"
+      DTS:ObjectName="AMT-03.reouLive11-sep-2012.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=AMT-03;User ID=sa;Initial Catalog=reouLive11-sep-2012;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAa/t3Fgsyw0y7JthoovuqrAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADXOIgLGco1zJl0srbEbcNgYRLB8wap9On8vyWPRPn0ygAAAAAOgAAAAAIAACAAAAAi7gjl9E2itWvK4v/S1tf0xHjRgGlkUg6dW2wNS0/mBiAAAAB7Z1SwI3zB53DpxdeDjXzXU6Lv3hYWI8hlj7cFPaypHkAAAAAzvjNVjgfVB9jnqg7p6r4qL4jq9kalGZyKogYssy2Ok6eMt6ubdYkTSqiarBNvgRfm6r/yOG8O8aNUoCc/8ff0</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AMT-05-PC.REOUDW.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8545B031-8059-456F-862B-AC6FEB649C90}"
+      DTS:ObjectName="AMT-05-PC.REOUDW.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=AMT-05-PC;User ID=sa;Initial Catalog=REOUDW;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAa/t3Fgsyw0y7JthoovuqrAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACuDYGZqQ8GOPIDrUyo31SPWD4QI7ma8OpSF7MBJzBpCwAAAAAOgAAAAAIAACAAAABCzAMkcyWNVhTAcEwIRXTJtQYa5C1m/v7gqydUbXiZ4SAAAAAxYOYFBwfOTcP9OUqIzrbjqx/vU/EvBte5vNQslQT/40AAAACaeOx8kxeBqmPjDVR/D3HMlZwBGE6AUu6dAvR+uwet5henWJqA6Lxv/VNUk9Mj6gI4ml9uVvu92u9Jiaquia/M</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E7C8CE0E-0D3E-4FF0-968E-3313E3BC52C0}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Course"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Course"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Courses]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Course.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMT-03.reouLive11-sep-2012.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMT-03.reouLive11-sep-2012.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      lineageId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].Columns[CourseHeader]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[CourseHeader]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].Columns[CourseHeader]"
+                      name="CourseHeader"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[Guid]"
+                      dataType="guid"
+                      name="Guid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[CourseHeader]"
+                      dataType="wstr"
+                      length="50"
+                      name="CourseHeader" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      dataType="nText"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[IsSimultaneous]"
+                      dataType="bool"
+                      name="IsSimultaneous" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[CourseDuration]"
+                      dataType="i4"
+                      name="CourseDuration" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[AdditionalDuration]"
+                      dataType="i4"
+                      name="AdditionalDuration" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[CourseFee]"
+                      dataType="cy"
+                      name="CourseFee" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[CourseTeaser]"
+                      dataType="nText"
+                      name="CourseTeaser" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[CourseSummary]"
+                      dataType="nText"
+                      name="CourseSummary" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[MetaKeywords]"
+                      dataType="nText"
+                      name="MetaKeywords" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[MetaDescription]"
+                      dataType="nText"
+                      name="MetaDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[CourseURL]"
+                      dataType="wstr"
+                      length="50"
+                      name="CourseURL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[ImageId]"
+                      dataType="i4"
+                      name="ImageId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[MinimumTimeForSection]"
+                      dataType="i4"
+                      name="MinimumTimeForSection" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[ContainEvaluationTest]"
+                      dataType="bool"
+                      name="ContainEvaluationTest" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[TestName]"
+                      dataType="wstr"
+                      length="50"
+                      name="TestName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[TestQuestionCount]"
+                      dataType="i4"
+                      name="TestQuestionCount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[TestAttempt]"
+                      dataType="i4"
+                      name="TestAttempt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[TestRetakeInterval]"
+                      dataType="i4"
+                      name="TestRetakeInterval" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[TestAutomateTime]"
+                      dataType="i4"
+                      name="TestAutomateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[TestEasyQuestionPercent]"
+                      dataType="i4"
+                      name="TestEasyQuestionPercent" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[TestIntermedQuestionPercent]"
+                      dataType="i4"
+                      name="TestIntermedQuestionPercent" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[TestDifficultQuestionPercent]"
+                      dataType="i4"
+                      name="TestDifficultQuestionPercent" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[PassPercentage]"
+                      dataType="i4"
+                      name="PassPercentage" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[StartFromSubscribeDate]"
+                      dataType="bool"
+                      name="StartFromSubscribeDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[ValidFrom]"
+                      dataType="dbTimeStamp"
+                      name="ValidFrom" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[ValidTo]"
+                      dataType="dbTimeStamp"
+                      name="ValidTo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[IsRemoved]"
+                      dataType="bool"
+                      name="IsRemoved" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[IsFree]"
+                      dataType="bool"
+                      name="IsFree" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[Active]"
+                      dataType="bool"
+                      name="Active" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[InsertedAt]"
+                      dataType="dbTimeStamp"
+                      name="InsertedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[UpdatedAt]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].ExternalColumns[UpdatedBy]"
+                      dataType="guid"
+                      name="UpdatedBy" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Course.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Course.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Course.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Course.Outputs[OLE DB Source Error Output].Columns[CourseHeader]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Course.Outputs[OLE DB Source Error Output].Columns[CourseHeader]"
+                      name="CourseHeader" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Course Destination"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Course Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimCourse]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Course Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMT-05-PC.REOUDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMT-05-PC.REOUDW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Course Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Course Destination.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\Data Flow Task\Course Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseId]"
+                      lineageId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Course Destination.Inputs[OLE DB Destination Input].Columns[CourseHeader]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CourseHeader"
+                      externalMetadataColumnId="Package\Data Flow Task\Course Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseName]"
+                      lineageId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output].Columns[CourseHeader]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseId]"
+                      dataType="i4"
+                      name="CourseId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Course Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseName]"
+                      dataType="wstr"
+                      length="100"
+                      name="CourseName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Course Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Course Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Course Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Course Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Course Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Course Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Tracks"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Tracks"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Tracks]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Tracks.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMT-03.reouLive11-sep-2012.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMT-03.reouLive11-sep-2012.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      lineageId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[Guid]"
+                      dataType="guid"
+                      name="Guid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      dataType="nText"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[MetaKeywords]"
+                      dataType="nText"
+                      name="MetaKeywords" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[MetaDescription]"
+                      dataType="nText"
+                      name="MetaDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[ValidFrom]"
+                      dataType="dbTimeStamp"
+                      name="ValidFrom" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[ValidTo]"
+                      dataType="dbTimeStamp"
+                      name="ValidTo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[IsFree]"
+                      dataType="bool"
+                      name="IsFree" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[Active]"
+                      dataType="bool"
+                      name="Active" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[InsertedAt]"
+                      dataType="dbTimeStamp"
+                      name="InsertedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[UpdatedAt]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[UpdatedBy]"
+                      dataType="guid"
+                      name="UpdatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[CertificateId]"
+                      dataType="i4"
+                      name="CertificateId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[ParentTrackId]"
+                      dataType="i4"
+                      name="ParentTrackId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[TrackFee]"
+                      dataType="cy"
+                      name="TrackFee" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[TrackDuration]"
+                      dataType="i4"
+                      name="TrackDuration" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].ExternalColumns[TrackURL]"
+                      dataType="wstr"
+                      length="50"
+                      name="TrackURL" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      name="Name" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Tracks Destination"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Tracks Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimTrack]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Tracks Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMT-05-PC.REOUDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMT-05-PC.REOUDW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Tracks Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tracks Destination.Inputs[OLE DB Destination Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\Data Flow Task\Tracks Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrackId]"
+                      lineageId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tracks Destination.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Data Flow Task\Tracks Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrackName]"
+                      lineageId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output].Columns[Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrackId]"
+                      dataType="i4"
+                      name="TrackId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Tracks Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrackName]"
+                      dataType="wstr"
+                      length="100"
+                      name="TrackName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Tracks Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Tracks Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Tracks Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Tracks Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Tracks Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Tracks Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+              endId="Package\Data Flow Task\Course Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\Course.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Tracks Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\Tracks.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{254B158F-72E2-4B87-A4E3-821DC5792FB0}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8545B031-8059-456F-862B-AC6FEB649C90}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="delete from DimCourse&#xA;delete from DimTrack" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Populate Fact Table"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A7B350E3-3E53-4404-8F6E-10EA6BD68C1E}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populate Fact Table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Populate Fact Table\Derived Column"
+              componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Populate Fact Table\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populate Fact Table\Derived Column.Inputs[Derived Column Input].Columns[InsertedAt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="InsertedAt"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsertedAt]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populate Fact Table\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Populate Fact Table\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Fact Table\Derived Column.Outputs[Derived Column Output].Columns[SnapshotDateKey]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Populate Fact Table\Derived Column.Outputs[Derived Column Output].Columns[SnapshotDateKey]"
+                      name="SnapshotDateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,4)[YEAR]([GETDATE]()) + [RIGHT]("0" + (DT_WSTR,2)[MONTH]([GETDATE]()),2) + [RIGHT]("0" + (DT_WSTR,2)[DAY]([GETDATE]()),2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,4)YEAR(GETDATE()) + RIGHT("0" + (DT_WSTR,2)MONTH(GETDATE()),2) + RIGHT("0" + (DT_WSTR,2)DAY(GETDATE()),2)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Populate Fact Table\Derived Column.Outputs[Derived Column Output].Columns[OrderDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Populate Fact Table\Derived Column.Outputs[Derived Column Output].Columns[OrderDate]"
+                      name="OrderDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,4)[YEAR](#{Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsertedAt]}) + [RIGHT]("0" + (DT_WSTR,2)[MONTH](#{Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsertedAt]}),2) + [RIGHT]("0" + (DT_WSTR,2)[DAY](#{Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsertedAt]}),2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,4)YEAR(InsertedAt) + RIGHT("0" + (DT_WSTR,2)MONTH(InsertedAt),2) + RIGHT("0" + (DT_WSTR,2)DAY(InsertedAt),2)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Populate Fact Table\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Populate Fact Table\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Fact Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populate Fact Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populate Fact Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populate Fact Table\OLE DB Destination"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactOrders]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populate Fact Table\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMT-05-PC.REOUDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMT-05-PC.REOUDW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OrderId]"
+                      cachedDataType="i4"
+                      cachedName="OrderId"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderId]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[OrderId]" />
+                    <inputColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CourseId]"
+                      cachedDataType="i4"
+                      cachedName="CourseId"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseId]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CourseId]" />
+                    <inputColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TrackId]"
+                      cachedDataType="i4"
+                      cachedName="TrackId"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrackId]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrackId]" />
+                    <inputColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SnapshotDateKey]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="SnapshotDateKey"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SnapshotDateKey]"
+                      lineageId="Package\Populate Fact Table\Derived Column.Outputs[Derived Column Output].Columns[SnapshotDateKey]" />
+                    <inputColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Price]"
+                      cachedDataType="cy"
+                      cachedName="Price"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Price]" />
+                    <inputColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OrderDate]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="OrderDate"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderDateKey]"
+                      lineageId="Package\Populate Fact Table\Derived Column.Outputs[Derived Column Output].Columns[OrderDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SnapshotDateKey]"
+                      dataType="i4"
+                      name="SnapshotDateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderDateKey]"
+                      dataType="i4"
+                      name="OrderDateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderId]"
+                      dataType="i4"
+                      name="OrderId" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseId]"
+                      dataType="i4"
+                      name="CourseId" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TrackId]"
+                      dataType="i4"
+                      name="TrackId" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
+                      dataType="cy"
+                      name="Amount" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Populate Fact Table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populate Fact Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populate Fact Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Populate Fact Table\OLE DB Source"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[OrderItems]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">Select 
+*,
+case when SubscribedType=1 then SubscribedType else 0 end as CourseId,
+case when SubscribedType=3 then SubscribedType else 0 end as TrackId
+from
+dbo.OrderItems
+Where SubscribedType=1 or SubscribedType=3</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Populate Fact Table\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMT-03.reouLive11-sep-2012.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMT-03.reouLive11-sep-2012.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Guid]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Guid]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Guid]"
+                      name="Guid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[OrderId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OrderId]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[OrderId]"
+                      name="OrderId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SubscribedType]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SubscribedType]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SubscribedType]"
+                      name="SubscribedType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SubscribedId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SubscribedId]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SubscribedId]"
+                      name="SubscribedId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[VatId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[VatId]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[VatId]"
+                      name="VatId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Price]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Price]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Price]"
+                      name="Price"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ValidFrom]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ValidFrom]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ValidFrom]"
+                      name="ValidFrom"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ValidTo]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ValidTo]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[ValidTo]"
+                      name="ValidTo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Active]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Active]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[Active]"
+                      name="Active"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsertedAt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InsertedAt]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsertedAt]"
+                      name="InsertedAt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedAt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedAt]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedAt]"
+                      name="UpdatedAt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedBy]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedBy]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[UpdatedBy]"
+                      name="UpdatedBy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CourseId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CourseId]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[CourseId]"
+                      name="CourseId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrackId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrackId]"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrackId]"
+                      name="TrackId"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Guid]"
+                      dataType="guid"
+                      name="Guid" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OrderId]"
+                      dataType="i4"
+                      name="OrderId" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SubscribedType]"
+                      dataType="i4"
+                      name="SubscribedType" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SubscribedId]"
+                      dataType="i4"
+                      name="SubscribedId" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[VatId]"
+                      dataType="i4"
+                      name="VatId" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Price]"
+                      dataType="cy"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ValidFrom]"
+                      dataType="dbTimeStamp"
+                      name="ValidFrom" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ValidTo]"
+                      dataType="dbTimeStamp"
+                      name="ValidTo" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Active]"
+                      dataType="bool"
+                      name="Active" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InsertedAt]"
+                      dataType="dbTimeStamp"
+                      name="InsertedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedAt]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UpdatedBy]"
+                      dataType="guid"
+                      name="UpdatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CourseId]"
+                      dataType="i4"
+                      name="CourseId" />
+                    <externalMetadataColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrackId]"
+                      dataType="i4"
+                      name="TrackId" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Guid]"
+                      dataType="guid"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Guid]"
+                      name="Guid" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OrderId]"
+                      dataType="i4"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OrderId]"
+                      name="OrderId" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SubscribedType]"
+                      dataType="i4"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SubscribedType]"
+                      name="SubscribedType" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SubscribedId]"
+                      dataType="i4"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SubscribedId]"
+                      name="SubscribedId" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VatId]"
+                      dataType="i4"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VatId]"
+                      name="VatId" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Price]"
+                      dataType="cy"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Price]"
+                      name="Price" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ValidFrom]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ValidFrom]"
+                      name="ValidFrom" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ValidTo]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ValidTo]"
+                      name="ValidTo" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Active]"
+                      dataType="bool"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Active]"
+                      name="Active" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InsertedAt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InsertedAt]"
+                      name="InsertedAt" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UpdatedAt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UpdatedAt]"
+                      name="UpdatedAt" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UpdatedBy]"
+                      dataType="guid"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UpdatedBy]"
+                      name="UpdatedBy" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CourseId]"
+                      dataType="i4"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CourseId]"
+                      name="CourseId" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrackId]"
+                      dataType="i4"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrackId]"
+                      name="TrackId" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Populate Fact Table.Paths[Derived Column Output]"
+              endId="Package\Populate Fact Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Populate Fact Table\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Populate Fact Table.Paths[OLE DB Source Output]"
+              endId="Package\Populate Fact Table\Derived Column.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Populate Fact Table\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{52D7B6FB-997B-42A2-9130-54888FA04E64}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{40E67AAD-0780-439D-BCCF-97E44F5B5A27}"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Populate Fact Table" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Data Flow Task"
+          TopLeft="117,196" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="111,130" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="193,172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24"
+              Start="0,0"
+              End="0,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Populate Fact Table"
+          TopLeft="115,266" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="193.5,238">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Data Flow Task\Course"
+          TopLeft="53,99" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Data Flow Task\Course Destination"
+          TopLeft="48,186" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Data Flow Task\Tracks"
+          TopLeft="254,98" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Data Flow Task\Tracks Destination"
+          TopLeft="251,187" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+          TopLeft="133.75,141">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45"
+              Start="0,0"
+              End="0,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="334,140">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Course">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Course Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Tracks">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Tracks Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Populate Fact Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Populate Fact Table\OLE DB Source"
+          TopLeft="101,140" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Populate Fact Table\Derived Column"
+          TopLeft="318,141" />
+        <EdgeLayout
+          Id="Package\Populate Fact Table.Paths[OLE DB Source Output]"
+          TopLeft="252,161.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="66,0"
+              Start="0,0"
+              End="58.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="58.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Populate Fact Table\OLE DB Destination"
+          TopLeft="313,231" />
+        <EdgeLayout
+          Id="Package\Populate Fact Table.Paths[Derived Column Output]"
+          TopLeft="397.25,183">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48"
+              Start="0,0"
+              End="0,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Fact Table\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populate Fact Table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
